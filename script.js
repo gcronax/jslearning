@@ -1,57 +1,57 @@
-console.log('hola mundo'); 
+// console.log('hola mundo'); 
 
-let x = 2; 
-
- 
- 
-
-let nombre = 'Pablo'; 
+// let x = 2; 
 
  
  
 
-let numeroentero=9; 
-
-let ndecimal=9.5; 
-
-let puntuacion=99; 
-
-let tienemascota=true; 
-
-let unavariable; 
-
-let nulo=null; 
-
- 
- 
- 
-
-console.log(nombre); 
-
-console.log(puntuacion); 
-
-console.log(tienemascota); 
-
-console.log(unavariable); 
-
-console.log(nulo); 
+// let nombre = 'Pablo'; 
 
  
  
 
-const numPI =3.1416; 
+// let numeroentero=9; 
 
-console.log(numPI) 
+// let ndecimal=9.5; 
+
+// let puntuacion=99; 
+
+// let tienemascota=true; 
+
+// let unavariable; 
+
+// let nulo=null; 
 
  
  
  
 
-let edad =18; 
+// console.log(nombre); 
 
-let nombra = "pepe"; 
+// console.log(puntuacion); 
 
-console.log("hola soy +"+nombra+", tengo"+edad) 
+// console.log(tienemascota); 
+
+// console.log(unavariable); 
+
+// console.log(nulo); 
+
+ 
+ 
+
+// const numPI =3.1416; 
+
+// console.log(numPI) 
+
+ 
+ 
+ 
+
+// let edad =18; 
+
+// let nombra = "pepe"; 
+
+// console.log("hola soy +"+nombra+", tengo"+edad) 
 
  
  
@@ -59,32 +59,47 @@ console.log("hola soy +"+nombra+", tengo"+edad)
  
  
 
-alert("bienbenino"); 
+// alert("bienbenino"); 
 
-var numero = prompt("ayuda"); 
+// var numero = prompt("meter numero"); 
 
-alert(numero+2); 
+// alert(numero+2); 
 
-numero= parseInt(numero); 
+// numero= parseInt(numero); 
 
-alert(numero+2); 
+// alert(numero*2); 
 
  
  
  
 
-for (let index = 0; index < 10; index++) { 
+// for (let index = 0; index < 10; index++) { 
 
-console.log(index) 
+// console.log(index) 
 
-} 
+// } 
 
-let numeros= [1,2,3,4,5,6,7,8,9]; 
+// let numeros= [1,2,3,4,5,6,7,8,9]; 
 
-for (let index = 0; index < numeros.length; index++) { 
+// for (let index = 0; index < numeros.length; index++) { 
 
-const element = numeros[index]; 
+// const element = numeros[index]; 
 
-console.log(element+"esto viene de una rray") 
+// console.log(element+"esto viene de una rray") 
 
-} 
+// } 
+
+// let carName = "Volvo";
+// alert(carName); 
+// let x=50;
+// alert(x); 
+// {
+//     let x,y;
+//     x=5;
+//     y=10;
+//     alert(x+y);
+//     let z = x+y;
+//     alert(z);
+// }
+
+
