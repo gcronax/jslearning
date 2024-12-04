@@ -103,7 +103,7 @@
 // }
 
 
-/*
+
 var Var = "var1";
 let Let = "let1";
 
@@ -125,8 +125,8 @@ console.log("Let:", Let);
 
 console.log("Let no se ha volcado ");
 
-*/
-/*
+
+
 let numero1 = prompt("Introduce el primer número:");
 let numero2 = prompt("Introduce el segundo número:");
 
@@ -240,6 +240,9 @@ for (let fruta of frutas2) {
 
 
 
+
+
+
 function Nombre() {
     let nombre;
     do {
@@ -288,4 +291,3 @@ function Formulario() {
 
 Formulario()
 
-*/
