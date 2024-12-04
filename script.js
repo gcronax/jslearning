@@ -144,7 +144,7 @@ if (suma > 10) {
 } else {
     console.log("La suma es menor a 10.");
 }
-*/
+
 
 
 function Nombre() {
@@ -160,10 +160,10 @@ function Correo() {
     let correo;
     do {
         correo = prompt("Ingresa tu correo electrónico:");
-        if (!correo.includes("@") && correo.includes(".")) {
-            alert("Correo inválido. Debe tener un formato válido (por ejemplo: usuario@dominio.com).");
+        if (!correo.includes("@") || !correo.includes(".")) {
+            alert("Correo inválido");
         }
-    } while (!correo.includes("@") && correo.includes("."));
+    } while (!correo.includes("@") || !correo.includes("."));
     return correo;
 }
 
@@ -202,7 +202,7 @@ function Formulario() {
     console.log(`Nombre: ${datos.nombre}`);
     console.log(`Correo: ${datos.correo}`);
     console.log(`Edad: ${datos.edad}`);
-    console.log(`Contraseña: ${"*".repeat(datos.contraseña.length)}`); // Muestra asteriscos en lugar de la contraseña real.
+    console.log(`Contraseña: ${datos.contraseña}`); 
 }
 
 Formulario()
@@ -212,7 +212,7 @@ Formulario()
 
 
 
-let numero = prompt("Introduce un número para ver su tabla de multiplicar:");
+let numero = prompt("Introduce un número: ");
 numero = parseInt(numero, 10);
 
 if (!isNaN(numero)) {
@@ -221,63 +221,71 @@ if (!isNaN(numero)) {
         console.log(`${numero} x ${i} = ${numero * i}`);
     }
 } else {
-    console.log("Por favor, introduce un número válido.");
+    console.log("Introduce un número válido.");
 }
 
 20
 
-const frutas = ["Manzana", "Plátano", "Naranja", "Fresa", "Uva"];
 
-for (let i = 0; i < frutas.length; i++) {
-    console.log(frutas[i]);
+
+
+
+
+
+const frutas2 = ["Manzana", "Plátano", "Naranja", "Fresa", "Uva"];
+
+for (let fruta of frutas2) {
+    console.log(fruta);
 }
 
 
-function validarNombre() {
+
+function Nombre() {
     let nombre;
     do {
-        nombre = prompt("Introduce tu nombre (al menos 3 caracteres):");
-        if (nombre.length < 3) {
-            alert("Error: El nombre debe tener al menos 3 caracteres.");
-        }
-    } while (nombre.length < 3);
+        nombre = prompt("Ingresa tu nombre (mínimo 3 caracteres):");
+        if (!isNaN(nombre)||nombre.length < 3) alert("Nombre inválido. Intenta de nuevo.");
+    } while (!isNaN(nombre)||nombre.length < 3);
     return nombre;
 }
 
-function validarCorreo() {
-    const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+function Correo() {
     let correo;
     do {
-        correo = prompt("Introduce tu correo electrónico (debe incluir @ y un dominio):");
-        if (!regexCorreo.test(correo)) {
-            alert("Error: El correo electrónico no es válido.");
+        correo = prompt("Ingresa tu correo electrónico:");
+        if (!correo.includes("@") || !correo.includes(".")) {
+            alert("Correo inválido");
         }
-    } while (!regexCorreo.test(correo));
+    } while (!correo.includes("@") || !correo.includes("."));
     return correo;
 }
 
-function validarEdad() {
+function Edad() {
     let edad;
     do {
-        edad = prompt("Introduce tu edad (debe ser un número mayor a 0):");
-        edad = parseInt(edad, 10);
+        edad = parseInt(prompt("Ingresa tu edad (debe ser un número mayor a 0):"));
         if (isNaN(edad) || edad <= 0) {
-            alert("Error: La edad debe ser un número mayor a 0.");
+            alert("Edad inválida. Debe ser un número mayor a 0.");
         }
     } while (isNaN(edad) || edad <= 0);
     return edad;
 }
 
-function validarFormulario() {
-    const nombre = validarNombre();
-    const correo = validarCorreo();
-    const edad = validarEdad();
+
+function Formulario() {
+    let datos = {
+        nombre: Nombre(),
+        correo: Correo(),
+        edad: Edad(),
+    };
 
     console.log("Todos los datos son válidos.");
-    console.log("Resumen de la información ingresada:");
-    console.log("Nombre:", nombre);
-    console.log("Correo:", correo);
-    console.log("Edad:", edad);
+    console.log("Datos ingresados:");
+    console.log(`Nombre: ${datos.nombre}`);
+    console.log(`Correo: ${datos.correo}`);
+    console.log(`Edad: ${datos.edad}`);
 }
 
-validarFormulario();
+Formulario()
+
+*/
