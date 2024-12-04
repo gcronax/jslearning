@@ -126,7 +126,7 @@ console.log("Let:", Let);
 console.log("Let no se ha volcado ");
 
 */
-
+/*
 let numero1 = prompt("Introduce el primer número:");
 let numero2 = prompt("Introduce el segundo número:");
 
@@ -144,66 +144,70 @@ if (suma > 10) {
 } else {
     console.log("La suma es menor a 10.");
 }
+*/
 
 
-function validarNombre(nombre) {
-    return nombre.length >= 3;
+function Nombre() {
+    let nombre;
+    do {
+        nombre = prompt("Ingresa tu nombre (mínimo 3 caracteres):");
+        if (nombre.length < 3) alert("Nombre inválido. Intenta de nuevo.");
+    } while (nombre.length < 3);
+    return nombre;
 }
 
-function validarCorreo(correo) {
-    const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regexCorreo.test(correo);
+function Correo() {
+    let correo;
+    do {
+        correo = prompt("Ingresa tu correo electrónico:");
+        if (!correo.includes("@") && correo.includes(".")) {
+            alert("Correo inválido. Debe tener un formato válido (por ejemplo: usuario@dominio.com).");
+        }
+    } while (!correo.includes("@") && correo.includes("."));
+    return correo;
 }
 
-function validarEdad(edad) {
-    return !isNaN(edad) && edad > 0;
+function Edad() {
+    let edad;
+    do {
+        edad = parseInt(prompt("Ingresa tu edad (debe ser un número mayor a 0):"));
+        if (edad <= 0) {
+            alert("Edad inválida. Debe ser un número mayor a 0.");
+        }
+    } while (!edad > 0);
+    return edad;
 }
 
-function validarContrasena(contrasena) {
-    return contrasena.length >= 8;
+function Contraseña() {
+    let contraseña;
+    do {
+        contraseña = prompt("Ingresa tu contraseña (mínimo 8 caracteres):");
+        if (contraseña.length < 8) {
+            alert("Contraseña inválida. Debe tener al menos 8 caracteres.");
+        }
+    } while (!contraseña.length >= 8);
+    return contraseña;
 }
 
-function simuladorDeFormulario() {
-    let nombre, correo, edad, contrasena;
-
-    do {
-        nombre = prompt("Introduce tu nombre (al menos 3 caracteres):");
-        if (!validarNombre(nombre)) {
-            alert("Error: El nombre debe tener al menos 3 caracteres.");
-        }
-    } while (!validarNombre(nombre));
-
-    do {
-        correo = prompt("Introduce tu correo electrónico (debe incluir @ y un dominio):");
-        if (!validarCorreo(correo)) {
-            alert("Error: El correo electrónico no es válido.");
-        }
-    } while (!validarCorreo(correo));
-
-    do {
-        edad = prompt("Introduce tu edad (debe ser un número mayor a 0):");
-        edad = parseInt(edad, 10);
-        if (!validarEdad(edad)) {
-            alert("Error: La edad debe ser un número mayor a 0.");
-        }
-    } while (!validarEdad(edad));
-
-    do {
-        contrasena = prompt("Introduce tu contraseña (al menos 8 caracteres):");
-        if (!validarContrasena(contrasena)) {
-            alert("Error: La contraseña debe tener al menos 8 caracteres.");
-        }
-    } while (!validarContrasena(contrasena));
+function Formulario() {
+    let datos = {
+        nombre: Nombre(),
+        correo: Correo(),
+        edad: Edad(),
+        contraseña: Contraseña(),
+    };
 
     console.log("Todos los datos son válidos.");
-    console.log("Resumen de la información ingresada:");
-    console.log("Nombre:", nombre);
-    console.log("Correo:", correo);
-    console.log("Edad:", edad);
-    console.log("Contraseña: (oculta por seguridad)");
+    console.log("Datos ingresados:");
+    console.log(`Nombre: ${datos.nombre}`);
+    console.log(`Correo: ${datos.correo}`);
+    console.log(`Edad: ${datos.edad}`);
+    console.log(`Contraseña: ${"*".repeat(datos.contraseña.length)}`); // Muestra asteriscos en lugar de la contraseña real.
 }
 
-simuladorDeFormulario();
+Formulario()
+
+
 
 
 
@@ -229,7 +233,6 @@ for (let i = 0; i < frutas.length; i++) {
 }
 
 
-// Función para validar el nombre
 function validarNombre() {
     let nombre;
     do {
@@ -241,7 +244,6 @@ function validarNombre() {
     return nombre;
 }
 
-// Función para validar el correo electrónico
 function validarCorreo() {
     const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     let correo;
@@ -254,7 +256,6 @@ function validarCorreo() {
     return correo;
 }
 
-// Función para validar la edad
 function validarEdad() {
     let edad;
     do {
@@ -267,7 +268,6 @@ function validarEdad() {
     return edad;
 }
 
-// Función principal
 function validarFormulario() {
     const nombre = validarNombre();
     const correo = validarCorreo();
@@ -280,5 +280,4 @@ function validarFormulario() {
     console.log("Edad:", edad);
 }
 
-// Llamar a la función principal
 validarFormulario();
