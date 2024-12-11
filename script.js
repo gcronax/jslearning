@@ -102,7 +102,7 @@
 //     alert(z);
 // }
 
-
+/*
 
 var Var = "var1";
 let Let = "let1";
@@ -290,4 +290,24 @@ function Formulario() {
 }
 
 Formulario()
+
+
+var parrafo= document.createElement("h3");
+var contenido = document.createTextNode("hola");
+parrafo.appendChild(contenido);
+document.body.appendChild(parrafo);
+alert(document.body.innerHTML)
+
+
+
+
+var parrafo =document.getElementById("mi");
+parrafo.innerHTML="Nuevo <strong>contendido</strong>";
+parrafo.style.backgroundColor="red";
+*/
+alert(document.getElementsByTagName("img").length)
+
+var a=document.getElementsByTagName("img")
+alert(a[a.length-1].src)
+
 
