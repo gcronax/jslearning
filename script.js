@@ -304,10 +304,20 @@ alert(document.body.innerHTML)
 var parrafo =document.getElementById("mi");
 parrafo.innerHTML="Nuevo <strong>contendido</strong>";
 parrafo.style.backgroundColor="red";
-*/
+
 alert(document.getElementsByTagName("img").length)
 
 var a=document.getElementsByTagName("img")
 alert(a[a.length-1].src)
 
+function prueba(){
+    alert("exito");
+}
+*/
+
+
+
+
+
+//file:///home/guicamher/Documents/jslearning/index.html
 
