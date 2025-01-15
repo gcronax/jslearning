@@ -17,7 +17,7 @@ function generarWeb(){
 
     var header1 = document.createElement("header");
     var h1 = document.createElement("h1");
-    var contenidotitulo = document.createTextNode("Mi Increíble Sitio Web de David");
+    var contenidotitulo = document.createTextNode("Mi Increíble Sitio Web de Gcronax");
     h1.appendChild(contenidotitulo);
     header1.appendChild(h1);
 
