@@ -3,9 +3,7 @@
 <html lang="en"> 
 
 <head> 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="estilo1_claro.css">
-<link rel="stylesheet" href="estilo2_oscuro.css">
+<link id="pruebaid" rel="stylesheet" href="estilo1_claro.css">
 
 <meta charset="UTF-8"> 
 
@@ -18,11 +16,15 @@
 <body>
     <h1>hola</h1>
 <div>
-    aa
     <select id="selectTema" >
-        <option  onclick="aplicarEstiloclaro1()" value="claro">tema claro</option>
-        <option onclick="aplicarEstiloclaro2()" value="oscuro">tema oscuro</option>
+        <option  onclick="aplicarEstiloclaro()" value="claro">tema claro</option>
+        <option onclick="aplicarEstilooscuro()" value="oscuro">tema oscuro</option>
     </select>
+</div>
+<button id="boton">sss</button>
+<div id="div1">
+    <button id="btnGenerar" onclick="generarWeb()">Generar Web</button>
+    <button id="btnVaciar" onclick="vaciarWeb()">Vaciar Web</button>
 </div>
 
 
